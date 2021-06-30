@@ -3,7 +3,7 @@ import 'package:flutter/painting.dart';
 /// Convenience class to access application colors.
 abstract class AppColors {
   /// Dark background color.
-  static const Color backgroundColor = Color.fromARGB(0, 164, 22, 26);
+  static const Color backgroundColor = Color.fromARGB(0, 43,45,66);
 
   /// Slightly lighter version of [backgroundColor].
   static const Color backgroundFadedColor = Color(0xFF191B1C);
@@ -15,4 +15,5 @@ abstract class AppColors {
   static const Color accentColor = Color(0xFFef8354);
 
   static const Color navColor =Color.fromRGBO(217, 14, 24,0);
+
 }
