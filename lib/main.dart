@@ -16,16 +16,5 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatelessWidget{
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.redAccent,
-        title: Text("First App", style: TextStyle(
-          color: Colors.white,
-        ),),
-      ),
-    );
-  }
-}
+
 

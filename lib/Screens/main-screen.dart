@@ -8,16 +8,19 @@ class MainScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
-          backgroundColor: Colors.redAccent,
-          title: Text("First App", style: TextStyle(
+          backgroundColor: Colors.red[800],
+          title: Text("BSocial", style: TextStyle(
             color: Colors.white,
           ),),
       ),
       body:Container(
-        color: Colors.grey,
+        color: Color.fromRGBO( 43,45,66,1),
         child: GridView(
           padding: EdgeInsets.all(25),
-          children: StudentChapter_Data.map((data)=> LogoCard(title: data.title, id: data.id, imageUrl: data.imageUrl,description: data.description,gallery: data.gallery)).toList(),
+          children: StudentChapter_Data.map((data)=> LogoCard(title: data.title, 
+          id: data.id, imageUrl: data.imageUrl,description: data.description,
+          gallery: data.gallery,managingCommitte: data.managingCommitte,
+          actionCommitte: data.actionCommitte, registrationLink: data.registrationLink, contactUs: data.contactUs,)).toList(),
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 300,
             childAspectRatio: 2.1 / 2.2,
