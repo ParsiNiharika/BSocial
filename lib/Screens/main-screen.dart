@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../Data/student-chapters.dart';
 import '../Widgets/logo-cards.dart';
-import 'package:test/styles.dart';
+
 
 class MainScreen extends StatelessWidget{
   @override
@@ -19,8 +19,7 @@ class MainScreen extends StatelessWidget{
           padding: EdgeInsets.all(25),
           children: StudentChapter_Data.map((data)=> LogoCard(title: data.title, 
           id: data.id, imageUrl: data.imageUrl,description: data.description,
-          gallery: data.gallery,managingCommitte: data.managingCommitte,
-          actionCommitte: data.actionCommitte, registrationLink: data.registrationLink, contactUs: data.contactUs,)).toList(),
+          gallery: data.gallery, registrationLink: data.registrationLink, contactUs: data.contactUs,events: data.events)).toList(),
           gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
             maxCrossAxisExtent: 300,
             childAspectRatio: 2.1 / 2.2,

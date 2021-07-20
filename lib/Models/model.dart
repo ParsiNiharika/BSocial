@@ -1,26 +1,24 @@
 import 'package:flutter/cupertino.dart';
 
-class Category {
+class StudentChapter {
   final String id;
   final String title;
   final String imageUrl;
   final String description;
   final List<String> gallery;
-  final List<Person> managingCommitte;
-  final List<Person> actionCommitte;
   final String registrationLink;
   final List<String> contactUs;
+  final List<String> events;
 
-  const Category(
+  StudentChapter(
       {required this.id,
       required this.title,
       required this.imageUrl,
       required this.description,
       required this.gallery,
-      required this.managingCommitte,
-      required this.actionCommitte,
       required this.registrationLink,
-      required this.contactUs});
+      required this.contactUs,
+      required this.events});
 }
 
 class Person {

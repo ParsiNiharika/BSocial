@@ -8,10 +8,9 @@ class LogoCard extends StatelessWidget {
   final String imageUrl;
   final String description;
   final List<String> gallery;
-  final List<Person> managingCommitte;
-  final List<Person> actionCommitte;
   final String registrationLink;
   final List<String> contactUs;
+  final List<String> events;
 
   LogoCard(
       {required this.title,
@@ -19,10 +18,9 @@ class LogoCard extends StatelessWidget {
       required this.imageUrl,
       required this.description,
       required this.gallery,
-      required this.managingCommitte,
-      required this.actionCommitte,
       required this.registrationLink,
-      required this.contactUs});
+      required this.contactUs,
+      required this.events});
 
   selectCategory(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
@@ -32,10 +30,9 @@ class LogoCard extends StatelessWidget {
         imageUrl: this.imageUrl,
         description: this.description,
         gallery: this.gallery,
-        managingCommitte: this.managingCommitte,
-        actionCommitte: this.actionCommitte,
         registrationLink: this.registrationLink,
-        contactUs: this.contactUs
+        contactUs: this.contactUs,
+        events: this.events,
       );
     }));
   }

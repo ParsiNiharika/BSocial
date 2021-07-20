@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../Widgets/about-widget.dart';
-import '../Screens/popup-screen.dart';
-import '../Models/model.dart';
 import '../Screens/events-screen.dart';
 import '../Screens/feed-screen.dart';
 
@@ -13,10 +11,9 @@ class NavigationScreen extends StatelessWidget {
   final String imageUrl;
   final String description;
   final List<String> gallery;
-  final List<Person> managingCommitte;
-  final List<Person> actionCommitte;
   final String registrationLink;
   final List<String> contactUs;
+  final List<String> events;
 
   NavigationScreen(
       {this.index,
@@ -25,10 +22,9 @@ class NavigationScreen extends StatelessWidget {
       required this.imageUrl,
       required this.description,
       required this.gallery,
-      required this.managingCommitte,
-      required this.actionCommitte,
       required this.registrationLink,
-      required this.contactUs});
+      required this.contactUs,
+      required this.events});
 
   @override
   Widget build(BuildContext context) {
@@ -39,14 +35,13 @@ class NavigationScreen extends StatelessWidget {
           imageUrl: this.imageUrl,
           description: this.description,
           gallery: this.gallery,
-          managingCommitte: this.managingCommitte,
-          actionCommitte: this.actionCommitte,
           registrationLink: this.registrationLink,
-          contactUs: this.contactUs);
+          contactUs: this.contactUs,
+          );
     } else if (index == 0) {
-      return EventScreen();
+      return EventScreen(id: this.id,events:this.events);
     } else {
-      return FeedScreen();
+      return FeedScreen(id: this.id);
     }
   }
 }

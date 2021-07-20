@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
+
 import '../Screens/Navigation-screen.dart';
-import '../Models/model.dart';
-import 'package:test/styles.dart';
 
 class AboutScreen extends StatefulWidget {
   final String title;
@@ -11,10 +10,9 @@ class AboutScreen extends StatefulWidget {
   final String imageUrl;
   final String description;
   final List<String> gallery;
-  final List<Person> managingCommitte;
-  final List<Person> actionCommitte;
   final String registrationLink;
   final List<String> contactUs;
+  final List<String> events;
 
   AboutScreen(
       {required this.title,
@@ -22,10 +20,9 @@ class AboutScreen extends StatefulWidget {
       required this.imageUrl,
       required this.description,
       required this.gallery,
-      required this.managingCommitte,
-      required this.actionCommitte,
       required this.registrationLink,
-      required this.contactUs});
+      required this.contactUs,
+      required this.events});
 
   @override
   _Main createState() => _Main(
@@ -34,10 +31,9 @@ class AboutScreen extends StatefulWidget {
       imageUrl: this.imageUrl,
       description: this.description,
       gallery: this.gallery,
-      managingCommitte: this.managingCommitte,
-      actionCommitte: this.actionCommitte,
       registrationLink: this.registrationLink,
-      contactUs: this.contactUs);
+      contactUs: this.contactUs,
+      events: this.events);
 }
 
 class _Main extends State<AboutScreen> {
@@ -46,10 +42,9 @@ class _Main extends State<AboutScreen> {
   final String imageUrl;
   final String description;
   final List<String> gallery;
-  final List<Person> managingCommitte;
-  final List<Person> actionCommitte;
   final String registrationLink;
   final List<String> contactUs;
+  final List<String> events;
 
   int _index = 1;
 
@@ -59,10 +54,9 @@ class _Main extends State<AboutScreen> {
       required this.imageUrl,
       required this.description,
       required this.gallery,
-      required this.managingCommitte,
-      required this.actionCommitte,
       required this.registrationLink,
-      required this.contactUs});
+      required this.contactUs,
+        required this.events});
 
   selectIcon(index, context) {
     setState(() {
@@ -87,10 +81,9 @@ class _Main extends State<AboutScreen> {
             description: this.description,
             gallery: this.gallery,
             index: this._index,
-            managingCommitte: this.managingCommitte,
-            actionCommitte: this.actionCommitte,
             registrationLink: this.registrationLink,
-            contactUs: this.contactUs),
+            contactUs: this.contactUs,
+            events: this.events),
       ),
       bottomNavigationBar: CurvedNavigationBar(
         color:Colors.pink,
