@@ -3,6 +3,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
 import '../Screens/Navigation-screen.dart';
 import '../Models/model.dart';
+import 'package:test/styles.dart';
 
 class AboutScreen extends StatefulWidget {
   final String title;
@@ -76,7 +77,7 @@ class _Main extends State<AboutScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
-        backgroundColor: Colors.red[800],
+        backgroundColor: Colors.pink,
       ),
       body: Container(
         child: NavigationScreen(
@@ -92,13 +93,24 @@ class _Main extends State<AboutScreen> {
             contactUs: this.contactUs),
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        color: Colors.red,
+        color:Colors.pink,
         backgroundColor: Colors.transparent,
         buttonBackgroundColor: Colors.transparent,
         items: <Widget>[
-          Icon(Icons.collections, size: 20, color: Colors.black),
-          Icon(Icons.home, size: 20, color: Colors.black),
-          Icon(Icons.comment, size: 20, color: Colors.black),
+          Tooltip(message: "Events",
+          padding: EdgeInsets.all(10),
+          margin: EdgeInsets.all(10),
+          child:Icon(Icons.collections, size: 20, color: Colors.black),),
+
+          Tooltip(message: "About",
+            padding: EdgeInsets.all(10),
+            margin: EdgeInsets.all(10),
+            child:Icon(Icons.home, size: 20, color: Colors.black),),
+
+          Tooltip(message: "Feed",
+            padding: EdgeInsets.all(10),
+            margin: EdgeInsets.all(10),
+            child:Icon(Icons.comment, size: 20, color: Colors.black),),
         ],
         animationDuration: Duration(
           milliseconds: 200,

@@ -185,7 +185,7 @@ showContactUs(BuildContext context){
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.all(10.0),
+                  padding: EdgeInsets.fromLTRB(25,20,10,0),
                   child: Image.asset(
                     imageUrl,
                     width: 200,
@@ -200,7 +200,7 @@ showContactUs(BuildContext context){
                       Text(
                         title,
                         style: TextStyle(
-                          fontSize: 56,
+                          fontSize: 50,
                           color: Colors.black,
                           fontWeight: FontWeight.w900,
                         ),
@@ -224,13 +224,13 @@ showContactUs(BuildContext context){
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 32.0),
+                  padding: const EdgeInsets.only(left: 32.0,bottom: 32),
                   child: Text(
-                    'Gallery',
+                    'GALLERY',
                     style: TextStyle(
                       fontSize: 25,
                       color: const Color(0xff47455f),
-                      fontWeight: FontWeight.w300,
+                      fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.left,
                   ),
@@ -257,28 +257,35 @@ showContactUs(BuildContext context){
                       }),
                 ),
                 SizedBox(height: 32),
-                Divider(color: Colors.black38),
-                SizedBox(height: 32),
-                Center(
-                  child: ElevatedButton(
-                    onPressed: () => showManagingCommitte(context),
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      child: Text(
-                        'Managing Committe',
-                        style: TextStyle(
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.green),
-                    ),
-                  ),
+                Padding(padding: EdgeInsets.only(left:32,right:32),
+                  child: Divider(color: Colors.black38),
                 ),
                 SizedBox(height: 32),
                 Center(
+                  child: ConstrainedBox(
+                  constraints: BoxConstraints.tightFor(width: 250, height: 50),
+                    child: ElevatedButton(
+                      onPressed: () => showManagingCommitte(context),
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        child: Text(
+                          'Managing Committe',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.green),
+                      ),
+                    ),
+                ),
+                ),
+                SizedBox(height: 32),
+                Center(
+                child: ConstrainedBox(
+                   constraints: BoxConstraints.tightFor(width: 250, height: 50),
                   child: ElevatedButton(
                     onPressed: () => showActionCommitte(context),
                     child: Padding(
@@ -296,41 +303,49 @@ showContactUs(BuildContext context){
                     ),
                   ),
                 ),
+                ),
+
                 SizedBox(height: 32),
                 Center(
-                  child: ElevatedButton(
-                    onPressed: () => showRegistrationLink(context),
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      child: Text(
-                        'Registration Link',
-                        style: TextStyle(
-                          fontSize: 18,
+                  child: ConstrainedBox(
+                  constraints: BoxConstraints.tightFor(width: 250, height: 50),
+                    child: ElevatedButton(
+                      onPressed: () => showRegistrationLink(context),
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        child: Text(
+                          'Registration Link',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
                         ),
                       ),
-                    ),
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.green),
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.green),
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(height: 32),
                 Center(
-                  child: ElevatedButton(
-                    onPressed: () => showContactUs(context),
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      child: Text(
-                        'Contact Us',
-                        style: TextStyle(
-                          fontSize: 18,
+                  child: ConstrainedBox(
+                  constraints: BoxConstraints.tightFor(width: 250, height: 50),
+                    child: ElevatedButton(
+                      onPressed: () => showContactUs(context),
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        child: Text(
+                          'Contact Us',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
                         ),
                       ),
-                    ),
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.green),
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.green),
+                      ),
                     ),
                   ),
                 ),

@@ -8,7 +8,7 @@ class MainScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
-          backgroundColor: Colors.red[800],
+          backgroundColor: Colors.pink,
           title: Text("BSocial", style: TextStyle(
             color: Colors.white,
           ),),

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../Widgets/about-widget.dart';
 import '../Screens/popup-screen.dart';
 import '../Models/model.dart';
+import '../Screens/events-screen.dart';
+import '../Screens/feed-screen.dart';
 
 class NavigationScreen extends StatelessWidget {
   final int? index;
@@ -42,9 +44,9 @@ class NavigationScreen extends StatelessWidget {
           registrationLink: this.registrationLink,
           contactUs: this.contactUs);
     } else if (index == 0) {
-      return PopupScreen();
+      return EventScreen();
     } else {
-      return PopupScreen();
+      return FeedScreen();
     }
   }
 }

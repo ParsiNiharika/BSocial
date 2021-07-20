@@ -52,6 +52,8 @@ flutter:
     - assets/IEEE/
     - assets/ISTE/
     - assets/IEI/
+    - assets/events/
+    - assets/Feed-csi/speak-a-thon.jpeg
 
   # To add assets to your application, add an assets section, like this:
   # assets:
