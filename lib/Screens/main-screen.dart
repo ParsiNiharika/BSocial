@@ -5,13 +5,32 @@ import '../Widgets/logo-cards.dart';
 
 class MainScreen extends StatelessWidget{
   @override
+
+  showIntroScreen(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+      return introScreen();
+    }));
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
           backgroundColor: Colors.pink,
           title: Text("BSocial", style: TextStyle(
             color: Colors.white,
-          ),),
+          ),
+          ),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.info,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              showIntroScreen();
+            },
+          )
+        ],
       ),
       body:Container(
         color: Color.fromRGBO( 43,45,66,1),
