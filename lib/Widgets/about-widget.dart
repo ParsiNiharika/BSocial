@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../Models/model.dart';
 import '../Screens/managingCommitte.dart';
 import '../Screens/actionCommitte.dart';
 
@@ -155,6 +154,46 @@ showContactUs(BuildContext context){
   );
 }
 
+
+  showGallery(context, image) {
+    return showDialog(
+      context: context,
+      builder: (context) {
+        return Center(
+            child: Material(
+              type: MaterialType.transparency,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.transparent,
+                ),
+                padding: EdgeInsets.all(5),
+                height: 320,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.7,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: Image.asset(
+                        image,
+                        width: 300,
+                        height: 300,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+        );
+      },
+      );
+  }
+
+
   Widget build(BuildContext context) {
     return SafeArea(
       bottom: false,
@@ -222,7 +261,12 @@ showContactUs(BuildContext context){
                       itemCount: gallery.length,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return Card(
+                        return GestureDetector(
+                            onTap: () {
+                              // This Will Call When User Click On ListView Item
+                              showGallery(context, this.gallery[index]);
+                            },
+                        child:Card(
                           clipBehavior: Clip.antiAlias,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(24),
@@ -232,7 +276,8 @@ showContactUs(BuildContext context){
                               child: Image.network(
                                 gallery[index],
                                 fit: BoxFit.cover,
-                              )),
+                              ))
+                        ),
                         );
                       }),
                 ),

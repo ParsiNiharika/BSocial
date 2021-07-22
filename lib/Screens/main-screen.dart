@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 import '../Data/student-chapters.dart';
 import '../Widgets/logo-cards.dart';
+import './introScreen.dart';
 
 
 class MainScreen extends StatelessWidget{
-  @override
-
   showIntroScreen(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-      return introScreen();
+      return IntroScreen();
     }));
   }
-
+ @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
@@ -27,7 +26,7 @@ class MainScreen extends StatelessWidget{
               color: Colors.white,
             ),
             onPressed: () {
-              showIntroScreen();
+              showIntroScreen(context);
             },
           )
         ],

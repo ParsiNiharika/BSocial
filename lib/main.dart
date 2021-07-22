@@ -4,13 +4,10 @@ import 'Screens/main-screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import '../Data/student-chapters.dart';
 
-
 Future<void> main() async {
-
-
-  await getStudentChapters();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await getStudentChapters();
   runApp(MyApp());
 }
 
