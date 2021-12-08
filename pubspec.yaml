@@ -57,6 +57,16 @@ flutter:
     - assets/IEI/
     - assets/events/
     - assets/Feed-csi/speak-a-thon.jpeg
+    - assets/Feed-csi/game-a-thon.jpeg
+    - assets/Feed-csi/flashforte.jpeg
+    - assets/Feed-csi/game-a-thon.jpeg
+    - assets/Feed-csi/ideathon.jpeg
+    - assets/Feed-csi/memerize.jpeg
+    - assets/Feed-csi/design-a-thon.jpeg
+    - assets/Route/home.PNG
+    - assets/Route/about.PNG
+    - assets/Route/events.PNG
+    - assets/Route/Feed.PNG
 
   # To add assets to your application, add an assets section, like this:
   # assets:

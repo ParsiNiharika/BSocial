@@ -22,13 +22,13 @@ class _IntroScreenState extends State<IntroScreen> {
     return Image.asset(
       'assets/fullscreen.jpg',
       fit: BoxFit.cover,
-      height: double.infinity,
-      width: double.infinity,
+      height:500,
+      width: 500,
       alignment: Alignment.center,
     );
   }
 
-  Widget _buildImage(String assetName, [double width = 350]) {
+  Widget _buildImage(String assetName, [double width = 100]) {
     return Image.asset('assets/$assetName', width: width);
   }
 
@@ -41,7 +41,7 @@ class _IntroScreenState extends State<IntroScreen> {
       bodyTextStyle: bodyStyle,
       descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
       pageColor: Colors.white,
-      imagePadding: EdgeInsets.zero,
+      imagePadding: EdgeInsets.only(top:150),
     );
 
     return IntroductionScreen(
@@ -52,28 +52,28 @@ class _IntroScreenState extends State<IntroScreen> {
           title: "Student Chapters",
           body:
           "Get to know about all the student chapters in VNRVJIET",
-          image: _buildImage('pic.jpg'),
+          image: Image.asset('assets/Route/home.PNG'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "About",
           body:
           "Have a quick glimpse of what the student chapter is about",
-          image: _buildImage('pic.jpg'),
+          image: Image.asset('assets/Route/about.PNG'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Events",
           body:
-          "Get to know all the evnts that are conducted by the student chapter",
-          image: _buildImage('pic.jpg'),
+          "Get to know all the events that are conducted by the student chapter",
+          image: Image.asset('assets/Route/events.PNG'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Feed",
           body:
           "Get updates of the student chapter",
-          image: _buildImage('pic.jpg'),
+          image: Image.asset('assets/Route/Feed.PNG'),
           decoration: pageDecoration,
         ),
       ],
