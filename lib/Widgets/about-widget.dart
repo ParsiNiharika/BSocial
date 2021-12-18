@@ -24,175 +24,169 @@ class About extends StatelessWidget {
   showManagingCommitte(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
       return managingCommitteScreen(
-          id: this.id,);
+        id: this.id,
+      );
     }));
   }
 
   showActionCommitte(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-      return actionCommitteScreen(
-          id: this.id);
+      return actionCommitteScreen(id: this.id);
     }));
   }
 
-  showRegistrationLink(BuildContext context){
+  showRegistrationLink(BuildContext context) {
     return showDialog(
-    context: context,
-    builder: (context) {
-      return Center(
-        child: Material(
-          type: MaterialType.transparency,
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
-            ),
-            padding: EdgeInsets.all(15),
-            height: 320,
-            width: MediaQuery.of(context).size.width * 0.7,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Registration Link",
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
+      context: context,
+      builder: (context) {
+        return Center(
+          child: Material(
+            type: MaterialType.transparency,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+              ),
+              padding: EdgeInsets.all(15),
+              height: 320,
+              width: MediaQuery.of(context).size.width * 0.7,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(
+                    height: 10,
                   ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  // width: 200,
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      this.registrationLink,
-                      maxLines: 3,
-                      style: TextStyle(fontSize: 15, color: Colors.blue),
-                      textAlign: TextAlign.center,
+                  Text(
+                    "Registration Link",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                ),
-                
-              ],
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    // width: 200,
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        this.registrationLink,
+                        maxLines: 3,
+                        style: TextStyle(fontSize: 15, color: Colors.blue),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      );
-    },
-  );
-}
+        );
+      },
+    );
+  }
 
-showContactUs(BuildContext context){
+  showContactUs(BuildContext context) {
     return showDialog(
-    context: context,
-    builder: (context) {
-      return Center(
-        child: Material(
-          type: MaterialType.transparency,
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.white,
-            ),
-            padding: EdgeInsets.all(15),
-            height: 320,
-            width: MediaQuery.of(context).size.width * 0.7,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "Contact Us",
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
+      context: context,
+      builder: (context) {
+        return Center(
+          child: Material(
+            type: MaterialType.transparency,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.white,
+              ),
+              padding: EdgeInsets.all(15),
+              height: 320,
+              width: MediaQuery.of(context).size.width * 0.7,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(
+                    height: 10,
                   ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  // width: 200,
-                  child: Align(
-                    alignment: Alignment.center,
-                    child:Text(
-                      this.contactUs[0],
-                      maxLines: 3,
-                      style: TextStyle(fontSize: 20, color: Colors.black),
-                      textAlign: TextAlign.center,
+                  Text(
+                    "Contact Us",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                ),
-                Container(
-                  // width: 200,
-                  child: Align(
-                    alignment: Alignment.center,
-                    child:Text(
-                      this.contactUs[1],
-                      maxLines: 3,
-                      style: TextStyle(fontSize: 15, color: Colors.blue),
-                      textAlign: TextAlign.center,
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    // width: 200,
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        this.contactUs[0],
+                        maxLines: 3,
+                        style: TextStyle(fontSize: 20, color: Colors.black),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                  Container(
+                    // width: 200,
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        this.contactUs[1],
+                        maxLines: 3,
+                        style: TextStyle(fontSize: 15, color: Colors.blue),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      );
-    },
-  );
-}
-
+        );
+      },
+    );
+  }
 
   showGallery(context, image) {
     return showDialog(
       context: context,
       builder: (context) {
         return Center(
-            child: Material(
-              type: MaterialType.transparency,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.transparent,
-                ),
-                padding: EdgeInsets.all(5),
-                height: 320,
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width * 0.7,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(5),
-                      child: Image.asset(
-                        image,
-                        width: 300,
-                        height: 300,
-                      ),
+          child: Material(
+            type: MaterialType.transparency,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.transparent,
+              ),
+              padding: EdgeInsets.all(5),
+              height: 320,
+              width: MediaQuery.of(context).size.width * 0.7,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(5),
+                    child: Image.asset(
+                      image,
+                      width: 300,
+                      height: 300,
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
+          ),
         );
       },
-      );
+    );
   }
-
 
   Widget build(BuildContext context) {
     return SafeArea(
@@ -204,7 +198,7 @@ showContactUs(BuildContext context){
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.fromLTRB(25,20,10,0),
+                  padding: EdgeInsets.fromLTRB(25, 20, 10, 0),
                   child: Image.asset(
                     imageUrl,
                     width: 200,
@@ -243,7 +237,7 @@ showContactUs(BuildContext context){
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 32.0,bottom: 32),
+                  padding: const EdgeInsets.only(left: 32.0, bottom: 32),
                   child: Text(
                     'GALLERY',
                     style: TextStyle(
@@ -262,33 +256,34 @@ showContactUs(BuildContext context){
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return GestureDetector(
-                            onTap: () {
-                              // This Will Call When User Click On ListView Item
-                              showGallery(context, this.gallery[index]);
-                            },
-                        child:Card(
-                          clipBehavior: Clip.antiAlias,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(24),
-                          ),
-                          child: AspectRatio(
-                              aspectRatio: 1,
-                              child: Image.network(
-                                gallery[index],
-                                fit: BoxFit.cover,
-                              ))
-                        ),
+                          onTap: () {
+                            // This Will Call When User Click On ListView Item
+                            showGallery(context, this.gallery[index]);
+                          },
+                          child: Card(
+                              clipBehavior: Clip.antiAlias,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(24),
+                              ),
+                              child: AspectRatio(
+                                  aspectRatio: 1,
+                                  child: Image.network(
+                                    gallery[index],
+                                    fit: BoxFit.cover,
+                                  ))),
                         );
                       }),
                 ),
                 SizedBox(height: 32),
-                Padding(padding: EdgeInsets.only(left:32,right:32),
+                Padding(
+                  padding: EdgeInsets.only(left: 32, right: 32),
                   child: Divider(color: Colors.black38),
                 ),
                 SizedBox(height: 32),
                 Center(
                   child: ConstrainedBox(
-                  constraints: BoxConstraints.tightFor(width: 250, height: 50),
+                    constraints:
+                        BoxConstraints.tightFor(width: 250, height: 50),
                     child: ElevatedButton(
                       onPressed: () => showManagingCommitte(context),
                       child: Padding(
@@ -305,35 +300,36 @@ showContactUs(BuildContext context){
                             MaterialStateProperty.all<Color>(Colors.green),
                       ),
                     ),
-                ),
-                ),
-                SizedBox(height: 32),
-                Center(
-                child: ConstrainedBox(
-                   constraints: BoxConstraints.tightFor(width: 250, height: 50),
-                  child: ElevatedButton(
-                    onPressed: () => showActionCommitte(context),
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-                      child: Text(
-                        'Action Committe',
-                        style: TextStyle(
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.green),
-                    ),
                   ),
                 ),
-                ),
-
                 SizedBox(height: 32),
                 Center(
                   child: ConstrainedBox(
-                  constraints: BoxConstraints.tightFor(width: 250, height: 50),
+                    constraints:
+                        BoxConstraints.tightFor(width: 250, height: 50),
+                    child: ElevatedButton(
+                      onPressed: () => showActionCommitte(context),
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        child: Text(
+                          'Action Committe',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                      ),
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.green),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 32),
+                Center(
+                  child: ConstrainedBox(
+                    constraints:
+                        BoxConstraints.tightFor(width: 250, height: 50),
                     child: ElevatedButton(
                       onPressed: () => showRegistrationLink(context),
                       child: Padding(
@@ -355,7 +351,8 @@ showContactUs(BuildContext context){
                 SizedBox(height: 32),
                 Center(
                   child: ConstrainedBox(
-                  constraints: BoxConstraints.tightFor(width: 250, height: 50),
+                    constraints:
+                        BoxConstraints.tightFor(width: 250, height: 50),
                     child: ElevatedButton(
                       onPressed: () => showContactUs(context),
                       child: Padding(

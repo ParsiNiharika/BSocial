@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:test/Screens/main-screen.dart';
 import './loginScreen.dart';
 
-
 class HomeScreen extends StatelessWidget {
   showLoginScreen(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(builder: (_) {
@@ -25,15 +24,18 @@ class HomeScreen extends StatelessWidget {
           child: Stack(children: <Widget>[
             SingleChildScrollView(
                 child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: <Widget>[
                   SizedBox(height: 200),
-                  Center(
-                      child: Text(
-                    "BSOCIAL",
-                    style: TextStyle(color: Colors.white),
-                  )),
-                  SizedBox(height: 50),
+                  Image.asset(
+                    "assets/BSocial/BS.png",
+                    width: 250,
+                    height: 250,
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
                   Center(
                     child: ConstrainedBox(
                       constraints:

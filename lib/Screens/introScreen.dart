@@ -22,7 +22,7 @@ class _IntroScreenState extends State<IntroScreen> {
     return Image.asset(
       'assets/fullscreen.jpg',
       fit: BoxFit.cover,
-      height:500,
+      height: 500,
       width: 500,
       alignment: Alignment.center,
     );
@@ -41,7 +41,7 @@ class _IntroScreenState extends State<IntroScreen> {
       bodyTextStyle: bodyStyle,
       descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
       pageColor: Colors.white,
-      imagePadding: EdgeInsets.only(top:150),
+      imagePadding: EdgeInsets.only(top: 150),
     );
 
     return IntroductionScreen(
@@ -50,29 +50,26 @@ class _IntroScreenState extends State<IntroScreen> {
       pages: [
         PageViewModel(
           title: "Student Chapters",
-          body:
-          "Get to know about all the student chapters in VNRVJIET",
+          body: "Get to know about all the student chapters in VNRVJIET",
           image: Image.asset('assets/Route/home.PNG'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "About",
-          body:
-          "Have a quick glimpse of what the student chapter is about",
+          body: "Have a quick glimpse of what the student chapter is about",
           image: Image.asset('assets/Route/about.PNG'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Events",
           body:
-          "Get to know all the events that are conducted by the student chapter",
+              "Get to know all the events that are conducted by the student chapter",
           image: Image.asset('assets/Route/events.PNG'),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: "Feed",
-          body:
-          "Get updates of the student chapter",
+          body: "Get updates of the student chapter",
           image: Image.asset('assets/Route/Feed.PNG'),
           decoration: pageDecoration,
         ),
@@ -81,7 +78,6 @@ class _IntroScreenState extends State<IntroScreen> {
       showSkipButton: true,
       skipFlex: 0,
       nextFlex: 0,
-
       skip: const Text('Skip'),
       next: const Icon(Icons.arrow_forward),
       done: const Text('Done', style: TextStyle(fontWeight: FontWeight.w600)),
